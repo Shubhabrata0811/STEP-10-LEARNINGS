@@ -5,7 +5,7 @@ const filterOdd = (arr) =>
     return value % 2 !== 0;
   });
 
-const halfOfElements = (arr) => arr.map((value) => value / 2);
+const halfOfElements = (arr) => map(((value) => value / 2), arr);
 
 const filterStrLongerThan5 = (arr) =>
   arr.filter((str) => {
@@ -30,3 +30,22 @@ const numberOfOdds = (arr) => {
   }
   return odds;
 };
+
+const countOfOdd = (arr) => arr.reduce((count, element) => element % 2 === 0 ? count : ++count, 0);
+
+const secondHighest = (arr) => arr.reduce((arr) => {
+  const maxOfArrayExcept = (array, except) => (array.reduce((ele1, ele2) => Math.max(ele1, ele2) !== except ? Math.max(ele1, ele2) : ele1));
+  return maxOfArrayExcept(arr, maxOfArrayExcept(arr));
+}
+);
+
+const map = (callBackFunc, array) => {
+  const returnArr = [];
+  for(let elements of array){
+    returnArr.push(callBackFunc(elements));
+  }
+
+  return returnArr;
+}
+
+
