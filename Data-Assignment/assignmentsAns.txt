@@ -1,0 +1,86 @@
+How many individuals are currently employed? => 
+2
+How many people own a car? => 
+1
+How many pets are fully vaccinated? => 
+3
+What are the names of all the pets, and what type of animal is each? => 
+┌─────────┬─────────┬──────────────┐
+│ (index) │ name    │ typeOfAnimal │
+├─────────┼─────────┼──────────────┤
+│ 0       │ 'Max'   │ 'Dog'        │
+│ 1       │ 'Kiwi'  │ 'Bird'       │
+│ 2       │ 'Bella' │ 'Cat'        │
+│ 3       │ 'Leo'   │ 'Cat'        │
+│ 4       │ 'Snowy' │ 'Rabbit'     │
+└─────────┴─────────┴──────────────┘
+Which cities do the individuals live in? => 
+┌─────────┬──────────┬─────────────┐
+│ (index) │ name     │ livesIn     │
+├─────────┼──────────┼─────────────┤
+│ 0       │ 'Rahul'  │ 'Pune'      │
+│ 1       │ 'Ananya' │ 'Bangalore' │
+│ 2       │ 'Ramesh' │ 'Jaipur'    │
+│ 3       │ 'Kavya'  │ 'Chennai'   │
+└─────────┴──────────┴─────────────┘
+How many hobbies are shared across the group? What are they? => 
+┌──────────────┬─────────┬─────────────┬───────────┬───────────┬──────────────────┬────────┐
+│ (index)      │ 0       │ 1           │ 2         │ 3         │ 4                │ Values │
+├──────────────┼─────────┼─────────────┼───────────┼───────────┼──────────────────┼────────┤
+│ numOfHobbies │         │             │           │           │                  │ 5      │
+│ hobbiesList  │ 'Chess' │ 'Gardening' │ 'Cooking' │ 'Reading' │ 'Watching shows' │        │
+└──────────────┴─────────┴─────────────┴───────────┴───────────┴──────────────────┴────────┘
+How many pets belong to people who are currently unemployed? => 
+2
+What is the average age of the individuals mentioned in the passage? => 
+34.333333333333336
+How many individuals have studied computer science, and how many of them have pets? => 
+┌─────────────────┬────────┐
+│ (index)         │ Values │
+├─────────────────┼────────┤
+│ studied CSE     │ 2      │
+│ and having pets │ 2      │
+└─────────────────┴────────┘
+How many individuals own more than one pet? => 
+1
+Which pets are associated with specific favorite activities? => 
+┌─────────┬─────────┬──────────────────────────────────────────────────────────────────────┐
+│ (index) │ petName │ activities                                                           │
+├─────────┼─────────┼──────────────────────────────────────────────────────────────────────┤
+│ 0       │ 'Max'   │ [ 'loves playing fetch in the park' ]                                │
+│ 1       │ 'Kiwi'  │ [ 'Knows more than 20 phrases', 'Mimics voice' ]                     │
+│ 2       │ 'Bella' │ [ 'love lounging in the sun' ]                                       │
+│ 3       │ 'Leo'   │ [ 'love lounging in the sun' ]                                       │
+│ 4       │ 'Snowy' │ [ "Enjoys hopping around Kavya's backyard and nibbling on carrots" ] │
+└─────────┴─────────┴──────────────────────────────────────────────────────────────────────┘
+What are the names of all animals that belong to people who live in Bangalore or Chennai? => 
+┌─────────┬─────────┐
+│ (index) │ Values  │
+├─────────┼─────────┤
+│ 0       │ 'Kiwi'  │
+│ 1       │ 'Snowy' │
+└─────────┴─────────┘
+How many vaccinated pets belong to people who do not own a car? => 
+2
+What is the most common type of pet among the group? => 
+Cat
+How many individuals have more than two hobbies? => 
+0
+How many individuals share at least one hobby with Ramesh? => 
+2
+Which pet is the youngest, and what is its name? => 
+Snowy
+What types of books are mentioned as interests, and who reads them? => 
+┌─────────┬──────────┬─────────────────────────┐
+│ (index) │ name     │ bookType                │
+├─────────┼──────────┼─────────────────────────┤
+│ 0       │ 'Ramesh' │ 'Historical fiction'    │
+│ 1       │ 'Kavya'  │ 'Modern fantasy novels' │
+└─────────┴──────────┴─────────────────────────┘
+How many individuals live in cities starting with the letter 'B'? => 
+1
+Which individuals do not own any pets? => 
+┌─────────┐
+│ (index) │
+├─────────┤
+└─────────┘
