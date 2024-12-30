@@ -153,49 +153,70 @@ const dummy = () => 1;
 const questionsArr = [
   {
     question: "How many individuals are currently employed?",
-    functionName: (data) =>
-      data.filter(
+    functionName: (data) => {
+      const ans = data.filter(
         (person) => person.employment !== null && person.employment.isEmployed
-      ).length,
+      ).length;
+      return ans + " individuals are currently employed.\n";
+    },
   },
 
   {
     question: "How many people own a car?",
-    functionName: (data) =>
-      data.filter(
+    functionName: (data) => {
+      const ans = data.filter(
         (person) =>
           person.transportPreference !== null &&
           person.transportPreference.personalVehicle.having
-      ).length,
+      ).length;
+
+      return ans + " people own a car.\n";
+    },
   },
 
   {
     question: "How many pets are fully vaccinated?",
-    functionName: (data) =>
-      data
+    functionName: (data) => {
+      const ans = data
         .filter(({ pets }) => pets !== null)
         .flatMap(({ pets }) => pets)
-        .filter(({ fullyVaccinated }) => fullyVaccinated).length,
+        .filter(({ fullyVaccinated }) => fullyVaccinated).length;
+      return ans + " pets are fully vaccinated.\n";
+    },
   },
 
   {
     question:
       "What are the names of all the pets, and what type of animal is each?",
-    functionName: (data) =>
-      data
+    functionName: (data) => {
+      const ans = data
         .filter((person) => person.pet !== null)
         .flatMap((person) => person.pets)
         .map((pet) => {
           return { name: pet.name, typeOfAnimal: pet.animalType };
-        }),
+        });
+
+      const ansStrS = ans.map(
+        ({ name, typeOfAnimal }) => name + " is a/an " + typeOfAnimal + ".\n"
+      );
+      const ansStr =
+        "Name of the animals are " +
+        ans.map(({ name }) => name).join(", ") +
+        ".\n";
+
+      return ansStr + ansStrS.join("");
+    },
   },
 
   {
     question: "Which cities do the individuals live in?",
-    functionName: (data) =>
-      data.map((person) => {
-        return { name: person.name, livesIn: person.livesIn };
-      }),
+    functionName: (data) => {
+      const ans = data.map((person) => {
+        return person.name + " lives in " + person.livesIn + ".\n";
+      });
+
+      return ans.join("");
+    },
   },
 
   {
@@ -377,17 +398,20 @@ const questionsArr = [
     question:
       "How many individuals live in cities starting with the letter 'B'?",
     functionName: (data) => {
-      return data.filter(({livesIn}) => livesIn !== null && livesIn[0] === 'B')
-        .map(({livesIn}) => livesIn).length;
+      return data
+        .filter(({ livesIn }) => livesIn !== null && livesIn[0] === "B")
+        .map(({ livesIn }) => livesIn).length;
     },
   },
 
   {
     question: "Which individuals do not own any pets?",
-    functionName: (data) => 
-      data.filter(({pets}) => pets === null || pets.length === 0)
-      .map(({name}) => {name: name}) 
-    ,
+    functionName: (data) =>
+      data
+        .filter(({ pets }) => pets === null || pets.length === 0)
+        .map(({ name }) => {
+          name: name;
+        }),
   },
 ];
 
